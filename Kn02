@@ -1,0 +1,15 @@
+# KN02: IaaS - Virtuelle Server
+
+## Aufgabe B: Instanz erstellen (40%)
+
+### Screenshot
+![Instanz Screenshot](KN02_Instance.png)
+
+---
+
+### Einstellungen der Instanz
+
+- **Diskgröße**: 8 GB  
+- **Betriebssystem**: Ubuntu 24.04  
+- **RAM**: 1 GB  
+- **CPUs (vCPUs)**: 1  
