@@ -6,6 +6,7 @@ users:
       shell: /bin/bash
       ssh_authorized_keys:
           - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDE6+5uAOR1z+s7Ah2NxvalmcKcNa076Q/C9htaZ0GSB10soY6HLStib6Qz0MLPh/LGfn68PJVL9wAKo66VBJWdWdeF0qj2/34zpgRlx1OHleoh+OUmEb2tfMkpJF5uyCY1XsCL3ziIGXuFPDIGhm4LSBD5c6E2zcsErdSqPRmyf/IFIhGMtfvC6lwdGMCylSrRk/E5TDTDuZbE99DCYSCZ0jVpNZD3WtZ+aCuieTuIYd/1I9m5IP24vahOign8amSb++l74lxRWlkwcn2/snm8Ed71x5ilAmwWq8Db2it3sw60AKdPYEE1w0EESNQHDrfP8bFYrTEU974WbwWqCG5L aws-key
+            - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDT+7GJtX+CrjK8wpAKWrddHlEGI7dYL9x/opjyhuexzOVJOOzJgCv5+QIACSdHUDCrdDsIdE9sj9JqvjhBouSCKBG1CeRkOwWCyR/xFq2E0t8XPsHPxkSVI4PdwQFbjnmeBindz/wQtSr6SuoZAn7LaKp6qj0ZRn+DGy5c60SmWDOXRVjLeDA+HU4Byvdtn+tyzJM4ADyng4e6lg3MaYzXk2ZBCDu7sF+HL/DucVsv+T7GXLyPX1k1xzFYEOiMBLAYvBhRZ7KaeSH7Uo1XnPAivwBF6+mirsF9M05LU3Sn2MP2d1ddXNmbZcZcBYgGSMwLKsY6+sT/pMAJq4Hkmug1 aws-key
 
 package_update: true
 packages:
