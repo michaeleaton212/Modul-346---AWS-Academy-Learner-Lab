@@ -1,0 +1,21 @@
+#cloud-config
+users:
+    - name: ubuntu
+      sudo: ALL=(ALL) NOPASSWD:ALL
+      groups: users, admin
+      shell: /bin/bash
+      ssh_authorized_keys:
+          - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDE6+5uAOR1z+s7Ah2NxvalmcKcNa076Q/C9htaZ0GSB10soY6HLStib6Qz0MLPh/LGfn68PJVL9wAKo66VBJWdWdeF0qj2/34zpgRlx1OHleoh+OUmEb2tfMkpJF5uyCY1XsCL3ziIGXuFPDIGhm4LSBD5c6E2zcsErdSqPRmyf/IFIhGMtfvC6lwdGMCylSrRk/E5TDTDuZbE99DCYSCZ0jVpNZD3WtZ+aCuieTuIYd/1I9m5IP24vahOign8amSb++l74lxRWlkwcn2/snm8Ed71x5ilAmwWq8Db2it3sw60AKdPYEE1w0EESNQHDrfP8bFYrTEU974WbwWqCG5L aws-key
+
+package_update: true
+packages:
+    - mariadb-server
+    - mariadb-client
+
+runcmd:
+    - sudo sed -i 's/127.0.0.1/0.0.0.0/g' /etc/mysql/mariadb.conf.d/50-server.cnf
+    - sudo systemctl restart mariadb
+    - sudo mysql -e "DROP USER IF EXISTS 'admin'@'%';"
+    - sudo mysql -e "CREATE USER 'admin'@'%' IDENTIFIED BY 'admin';"
+    - sudo mysql -e "GRANT ALL PRIVILEGES ON *.* TO 'admin'@'%' WITH GRANT OPTION;"
+    - sudo mysql -e "FLUSH PRIVILEGES;"
